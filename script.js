@@ -24,17 +24,20 @@ let guessfunc = () => { function Res () {
     console.log(randomNum)
 
     let userNum = prompt('Введите число. У Вас 10 попыток');
+    console.log(userNum);
 
     if (isNaN(userNum)) {
         alert('Можно вводить только числа');
+        return guessfunc();
     }
 
     if (attempts === 0) {
         alert('Попытки закончились');
     }
 
-    if (userNum === false ) {
+    if (userNum === null ) {
         alert('Игра закончилась')
+        return Res();
         
     }
 
