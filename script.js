@@ -21,6 +21,7 @@
 let guessfunc = () => { function Res () {
     let randomNum = parseInt(Math.random() * 1000);
     let attempts = 10;
+    console.log(randomNum)
 
     let userNum = prompt('Введите число. У Вас 10 попыток');
 
@@ -32,9 +33,9 @@ let guessfunc = () => { function Res () {
         alert('Попытки закончились');
     }
 
-    if (userNum === null) {
+    if (userNum === false ) {
         alert('Игра закончилась')
-        attempts=10;
+        
     }
 
     attempts--;
